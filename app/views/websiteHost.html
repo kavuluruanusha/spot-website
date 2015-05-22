@@ -1,0 +1,21 @@
+
+<div class="modal-header">
+  <h3 class="modal-title">Enter Website Host name</h3>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal" role="form" name="frmHost">
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="host">Host name:</label>
+      <div class="col-sm-8">
+        <input id="websitehost" type="text" class="form-control" id="host" name="txtHost" ng-model=website.host ng-keyup="onEnter($event)"
+        ng-pattern="hostNameRegex" required placeholder="Enter website's host name">
+
+      </div>
+    </div>
+    
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary " type="button" ng-click="ok()" ng-disabled="frmHost.txtHost.$invalid">Accept</button>
+  <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+</div>

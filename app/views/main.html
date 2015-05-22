@@ -1,0 +1,60 @@
+<div ng-controller="MainCtrl">
+  <h1 id="title">GeoLocation Test</h1>
+  <hr class="divider"></hr>
+  <h4>Estimated location</h4>
+  <table align="center" class="empty table">
+    <tbody>
+      <tr>
+        <td class="field_name">IP</td>
+        <td id="location_query" class="location_value">{{location.query}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-disabled="location.query=='0.0.0.0'" ng-click="onHelpClick('IP')"></i></td>
+      </tr>
+      <tr>
+        <td class="field_name">Country</td>
+        <td id="location_country" class="location_value">{{location.country}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-click="onHelpClick('country')" ng-disabled="location.query=='0.0.0.0'"></i></td>
+      </tr>
+      <tr>
+        <td class="field_name">Region</td>
+        <td id="location_regionName" class="location_value">{{location.regionName}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-click="onHelpClick('region')" ng-disabled="location.query=='0.0.0.0'"></i></td>
+      </tr>
+      <tr>
+        <td class="field_name">City</td>
+        <td id="location_city" class="location_value">{{location.city}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-click="onHelpClick('city')" ng-disabled="location.query=='0.0.0.0'"></i></td>
+      </tr>
+      <tr>
+        <td class="field_name">Time zone</td>
+        <td id="location_timezone" class="location_value">{{location.timezone}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-click="onHelpClick('time zone')" ng-disabled="location.query=='0.0.0.0'"></i></td>
+      </tr>
+      <tr>
+        <td class="field_name">Latitude</td>
+        <td id="location_lat" class="location_value">{{location.lat}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-click="onHelpClick('latitude')" ng-disabled="location.query=='0.0.0.0'"></i></td>
+      </tr>
+      <tr>
+        <td class="field_name">Longitude</td>
+        <td id="location_lon" class="location_value">{{location.lon}}</td>
+        <td><i class="glyphicon glyphicon-question-sign" ng-click="onHelpClick('longitude')" ng-disabled="location.query=='0.0.0.0'"></i></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="locationButtonSet">
+    <button type="button" class="btn btn-default" ng-click="getMyLocation()">My location</button>
+    <button type="button" class="btn btn-default" ng-disabled="myLocationNotPresent" ng-click="resetLocationDetails()" ng-disabled>Reset location</button>
+    <button type="button" class="btn btn-default" ng-click="launchWebsiteInput()">Locate a Website</button>
+    <span ng-show='!isNullOrUndefined(website.host)'>Selected website: <label> {{website.host}}</label></span>
+  </div>
+
+  <section id="map" ng-if="location.query!='0.0.0.0'">
+    <ui-gmap-google-map id="gmap" center='map.center' zoom='map.zoom' refresh='true'>
+      <ui-gmap-markers models="markers" visible="'true'" coords="'self'" animation="Animation.BOUNCE" fit="'true'" doCluster="false" icon="'icon'" click="markerClicked">
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
+
+  </section>
+
+</div>

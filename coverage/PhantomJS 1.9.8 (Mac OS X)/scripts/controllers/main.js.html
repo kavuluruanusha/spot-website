@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/controllers/main.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">scripts/controllers/main.js</span></h1>
+    <h2>
+        Statements: <span class="metric">97.7% <small>(85 / 87)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">96.88% <small>(31 / 32)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">90% <small>(18 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">97.47% <small>(77 / 79)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">scripts/controllers/</a> &#187; main.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/**
+ * @ngdoc function
+ * @name uichallengeApp.controller:MainCtrl
+ * @description
+ * # MainCtrl
+ * Controller of the uichallengeApp
+ */
+angular.module('uichallengeApp')
+  .controller('MainCtrl', ['$scope', '$rootScope', '$http', 'uiGmapGoogleMapApi', '$modal', function ($scope, $rootScope, $http, uiGmapGoogleMapApi, $modal) {
+    
+    $scope.noLocationObj = {
+      query: "0.0.0.0",
+      country: "",
+      regionName: "",
+      city: "",
+      timezone: "",
+      lat: "",
+      lon: "",
+      isp: ""
+    };
+&nbsp;
+  	$scope.location = $scope.noLocationObj;
+    $scope.gotLocationOnce = false;
+  	$scope.meKey = "me";
+  	$scope.websiteKey = "website";
+    $scope.website = {};
+    $scope.googleMaps = {};
+    $scope.myLocationNotPresent = true;
+&nbsp;
+    $scope.map = { 
+      center: { latitude: 45, longitude: -73 }, 
+      zoom: 4, 
+      bounds: {}
+    };
+&nbsp;
+    uiGmapGoogleMapApi.then(function(maps) {
+      $scope.googleMaps = maps;
+      var div = document.getElementById("gmap");
+   
+      $scope.mapOptions = {
+        center: $scope.googleMaps.LatLng($scope.location.lat, $scope.location.lon),
+        zoom: 15,
+        mapTypeId: $scope.googleMaps.MapTypeId.ROADMAP
+      };
+  
+    });
+    
+    $scope.markers = [];
+&nbsp;
+  	$scope.isNullOrUndefined = function(elem){
+      
+  		if (typeof(elem) === "undefined") return true;
+  		if (elem === "") return true;
+  		if (elem === null) return true;
+  		if (angular.equals(elem, {})) return true;
+  		if ((Array.isArray(elem)) &amp;&amp; (elem.length === 0)) return true;
+  		return false;
+  	};
+&nbsp;
+  	$scope.onHelpClick = function(field){
+  		if ($scope.isNullOrUndefined(field)) return;
+  		if ($scope.isNullOrUndefined($scope.location.isp)) return;
+  		var now = new Date();
+  		window.alert("This is your " + field + " from ISP " + $scope.location.isp + " at " + now.toDateString());
+  	};
+&nbsp;
+  	$scope.updateLocationDetails = function(data, who){
+      if (who == $scope.meKey){
+  		  $scope.location = data;
+        $scope.myLocationNotPresent = false;
+      }
+      else{
+        $scope.location = {
+          query: data.ip,
+          country: data.country_name,
+          regionName: data.region_name,
+          city: data.city,
+          timezone: data.time_zone,
+          lat: data.latitude,
+          lon: data.longitude,
+          isp: data.region_name
+        };
+      }
+  	};
+&nbsp;
+  	$scope.resetLocationDetails = function(){
+      $scope.markers[0] = {"id":"nomarker"};
+      $scope.myLocationNotPresent = true;
+      if ($scope.markers.length === 2){
+        $scope.updateLocationDetails($scope.markers[1].data, $scope.websiteKey);
+      }else{
+        $scope.location = $scope.noLocationObj;
+      }
+  	};
+&nbsp;
+  	$scope.getMyLocation = function(){
+  		var url = "http://ip-api.com/json/";
+  		$scope.getLocationInfo(url, $scope.meKey);
+  	};
+&nbsp;
+  	$scope.getWebsiteLocation = function(host){
+  		if ($scope.isNullOrUndefined(host)) return;
+  		var url = "http://freegeoip.net/json/" + host;
+  		$scope.getLocationInfo(url, $scope.websiteKey);
+  	};
+  	
+    $scope.mapLocation = function(data, who){
+      
+  		var newMarker = {
+        "id": who,
+        "latitude": $scope.location.lat,
+        "longitude": $scope.location.lon,
+        "title": who,
+        "data": data      
+      };
+&nbsp;
+      if (who === $scope.meKey){
+        $scope.markers[0] = newMarker;
+      }else{
+        $scope.markers[1] = newMarker;
+      }
+  	};
+&nbsp;
+&nbsp;
+  	$scope.getLocationInfo = function(url,who){
+      $scope.gotLocationOnce = true;
+      
+      $http.get(url).success(function(data){        
+          $scope.updateLocationDetails(data,who);
+          $scope.mapLocation(data, who);        
+      }); 
+  	};
+&nbsp;
+    $scope.launchWebsiteInput=function(){
+      var modalInstance = $modal.open({
+        animation: true,
+        templateUrl: 'views/websiteHost.html',
+        controller: 'ModalInstanceCtrl',
+        resolve: {
+          host: <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >            return $scope.website.host;</span>
+          }
+        }
+      });
+      
+      modalInstance.result.then(function (host) {
+        $scope.getWebsiteLocation(host);
+        $scope.website.host = host;
+      }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      });
+      return modalInstance;
+    };
+&nbsp;
+  	$scope.markerClicked = function(marker) {
+      if($scope.isNullOrUndefined(marker)) {
+        return;
+      }
+      var data = marker.model.data;
+      $scope.updateLocationDetails(data,marker.key);
+  	};
+  }]);
+&nbsp;
+angular.module('uichallengeApp').controller('ModalInstanceCtrl', function ($scope, $modalInstance, host) {
+&nbsp;
+  $scope.website = {};
+  $scope.website.host = host;
+  $scope.ok = function () {
+    $modalInstance.close($scope.website.host);
+  };
+&nbsp;
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+&nbsp;
+  $scope.hostNameRegex = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$/;
+&nbsp;
+  $scope.onEnter = function(evt){
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(angular.equals(evt.keyCode,13) &amp;&amp; !(angular.equals($scope.website.host,null) || angular.equals($scope.website.host,''))){
+      $scope.ok();
+    }
+  };
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 21 2015 11:13:43 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
